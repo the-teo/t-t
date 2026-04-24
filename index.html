@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t&t — A Friendship Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <!-- PERSISTENT COUNTER -->
+        <div id="friendship-counter" class="system-counter mono" title="time since May 10, 2023">
+            0 days
+        </div>
+
+        <!-- GLOBAL BRAND MARK (Easter Egg Trigger) -->
+        <div id="brand-mark" class="brand-mark">t&t</div>
+
+        <!-- 1. INTRO SCREEN -->
+        <section id="screen-intro" class="screen active">
+            <div class="content-center">
+                <p class="subtitle pink">for Tanya</p>
+                <h1 class="main-title">3 years</h1>
+                <button class="btn-primary" onclick="navigateTo('screen-tracks')">start</button>
+            </div>
+        </section>
+
+        <!-- 2. TRACKLIST (MAIN HUB) -->
+        <section id="screen-tracks" class="screen">
+            <div class="hub-layout">
+                <div class="hub-header">
+                    <h2 class="pink">The Tracklist</h2>
+                    <p class="muted">A collection of moments.</p>
+                </div>
+
+                <div class="track-explorer">
+                    <ul id="tracklist" class="track-list">
+                        <!-- JS generated items -->
+                    </ul>
+                    <div id="track-preview" class="track-preview">
+                        <div id="track-img" class="preview-img"></div>
+                        <p id="track-cap" class="preview-caption">Select a memory to play.</p>
+                    </div>
+                </div>
+
+                <div class="hub-actions">
+                    <button class="btn-secondary" onclick="openQuiz()">🎲 quiz about us</button>
+                    <button class="btn-primary" onclick="navigateTo('screen-cookies')">next</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. COOKIE PAGE -->
+        <section id="screen-cookies" class="screen">
+            <div class="content-center cookie-page-layout">
+                <h2 class="cookie-title">Cookie Message</h2>
+                
+                <div id="cookie-container" class="cookie-display-area">
+                    <p id="cookie-display" class="cookie-text">Need a little boost?</p>
+                </div>
+
+                <div class="cookie-trigger">
+                    <button class="btn-cookie-primary" onclick="getCookie()">get a cookie</button>
+                </div>
+
+                <div class="cookie-info">
+                    <p class="muted extra-small">cookies opened: <span id="cookie-count">0</span></p>
+                    <a href="#" class="cookie-report-link" onclick="navigateTo('screen-stats'); return false;">&larr; view report &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. STATS PAGE -->
+        <section id="screen-stats" class="screen">
+            <div class="stats-container mono">
+                <header class="stats-header">
+                    <span class="blink green">></span> t&t — Friendship Analysis Report
+                </header>
+                <div id="stats-terminal" class="terminal-body">
+                    <!-- Typing stats -->
+                </div>
+                <div id="stats-final" class="final-result hidden">
+                    <hr>
+                    <p class="impact-text pink">Final result: worth it</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODALS -->
+
+        <!-- Quiz Modal -->
+        <div id="quiz-modal" class="modal hidden">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeQuiz()">×</button>
+                <div id="quiz-intro">
+                    <h3 class="pink">The Quiz</h3>
+                    <p>How well do you remember us?</p>
+                    <button class="btn-primary" onclick="startQuiz()">begin</button>
+                </div>
+                <div id="quiz-body" class="hidden">
+                    <p id="quiz-progress" class="small muted"></p>
+                    <p id="quiz-q" class="question-text"></p>
+                    <div id="quiz-options" class="options-grid"></div>
+                </div>
+                <div id="quiz-results" class="hidden">
+                    <h3 id="score-display">0/0</h3>
+                    <p id="score-msg" class="pink"></p>
+                    <button class="btn-secondary" onclick="closeQuiz()">back to hub</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden Feature Modal -->
+        <div id="hidden-modal" class="modal hidden">
+            <div class="modal-content emotional">
+                <p class="pink italic">still here, still us.</p>
+                <p class="small">3 years later and still my favorite person.</p>
+                <button class="btn-close" onclick="closeHidden()">close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
