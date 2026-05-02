@@ -14,18 +14,18 @@ const cookies = [
     "you're doing great, i promise.",
     "i'm so glad we met.",
     "everything is better with you.",
-    "you deserve all the good things.",
+    "you deserve everything.",
     "still my favorite person to talk to.",
-    "thanks for being you.",
+    "thanks for existing.",
     "sending you a digital hug.",
     "you've got this.",
     "i believe in you more than words can say.",
-    "it's okay to take a break.",
-    "you are so incredibly loved.",
+    "it's okay, i'm always here.",
+    "you are so incredibly loved (by me).",
     "your smile lights up my day.",
     "i'm always in your corner.",
-    "the world is brighter because you're in it.",
-    "thank you for simply existing.",
+    "the world is brighter and priettier because you're in it.",
+    "thank you for simply being you.",
     "you are stronger than you know.",
     "i'm so proud of how far you've come.",
     "your kindness doesn't go unnoticed.",
@@ -64,21 +64,20 @@ const cookies = [
     "thank you for sharing your light with me.",
     "you are irreplaceable.",
     "my life is better because you're a part of it.",
-    "you're the best kind of different.",
-    "i'm thinking of you right now.",
+    "you're the best kind of special.",
+    "i'm thinking of you right now (all the time).",
     "you are worthy of all the love you give.",
     "your soul is so beautiful.",
     "i appreciate the little things you do.",
     "you bring out the best in me.",
     "it's a privilege to be in your life.",
-    "you are so much more than your mistakes.",
+    "you are so much more than you believe.",
     "i love how you see the world.",
     "you're my safe space.",
     "thank you for making me smile.",
-    "you have such a warm, inviting energy.",
+    "you have such a warm, comforting vibe.",
     "i'm so incredibly thankful for you.",
     "you matter more than you realize.",
-    "i'm holding your hand in spirit.",
     "your heart is so pure.",
     "you are doing a wonderful job.",
     "i love that we understand each other.",
@@ -137,25 +136,72 @@ const cookies = [
     "i am so incredibly fond of you.",
     "you are wonderfully made.",
     "i love the way your mind works.",
-    "you are my favorite distraction.",
+    "you are my favorite distraction :)).",
     "please never change who you are.",
-    "you are a steady anchor in a stormy sea.",
     "i love your kind heart.",
     "you are such a rare gift.",
-    "i'm wrapping you in love and light.",
+    "i'm wrapping you in love.",
     "you will always be deeply special to me."
 ];
 
 const quizQuestions = [
-    { q: "Where did we connected?", options: ["During a class", "The Library", "Online", "Mutual friend"], correct: 1 },
-    { q: "Who is more chaotic?", options: ["Tanya", "Me", "Both (equally)", "Depends on the day"], correct: 0 },
-    { q: "Who is a little angel?", options: ["Tanya", "Lara", "Teo"], correct: 0 },
-    { q: "Best quality time?", options: ["Reading", "Watching a movie", "Cooking together", "Talking", "All of the above"], correct: 4 },
-    { q: "What is our stability level?", options: ["Rock solid", "Vibes only", "Questionable", "Chaotic good"], correct: 0 },
-    { q: "Do you love Teo?", options: ["Nope", "Sometimes", "Most times", "Yes"], correct: 3 },
-    { q: "How many years so far?", options: ["1 year", "2 years", "3 years"], correct: 2 },
-    { q: "How many years to go?", options: ["None", "2 years", "1 month", "Forever"], correct: 3 }
-];
+    {
+      q: "Where did this whole thing actually start?",
+      options: ["Math class", "Playin solitaire", "Online", "We don’t even know anymore"],
+      correct: 1
+    },
+    {
+      q: "What are we actually doing when we say 'let’s relax'?",
+      options: ["Studying", "Reading", "Taking a walk", "Cooking"],
+      correct: 1
+    },
+    {
+      q: "What’s one thing we somehow keep alive no matter what?",
+      options: ["Our sleep schedule", "TikTok streak", "Motivation", "Sanity"],
+      correct: 1
+    },
+    {
+      q: "What’s our default activity together?",
+      options: ["Going out", "Reading", "Watching movies", "Talking non-stop"],
+      correct: 3
+    },
+    {
+      q: "What do we spam each other with daily?",
+      options: ["Emails", "Homework", "Instagram updates", "Nothing"],
+      correct: 2
+    },
+    {
+      q: "What kind of people are we, realistically?",
+      options: ["Gym people", "Party people", "Bookworms", "Early sleepers"],
+      correct: 2
+    },
+    {
+      q: "What game do we randomly play?",
+      options: ["Chess", "Jocul cuvintelor", "Truth or dare", "We don’t play games"],
+      correct: 1
+    },
+    {
+      q: "How does 'watching a movie' usually go?",
+      options: ["We focus 100%", "We fall asleep", "We talk over it", "We never finish it"],
+      correct: 2 
+    },
+    {
+        q: "Who is the better cook?",
+        options: ["Tanya", "Teo", "Teo + Tanya"],
+        correct: 2 
+    },
+    {
+        q: "Where are the best concerts held?",
+        options: ["The kitchen", "In the car", "In the bedroom"],
+        correct: 1 
+    },
+    {
+        q: "Do you love Teo?",
+        options: ["Nope", "Maybe", "Sometimes", "suta la mie"],
+        correct: 3 
+    }
+    
+  ];
 
 const stats = [
     { label: "Analyzing friendship...", val: "DONE", type: "header" },
