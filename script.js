@@ -16,19 +16,19 @@ const tracks = [
     { title: "late night talks", cap: "(nu-mi amintesc ce faceam)", img: "url('img/10.png')" },
     { title: "la aer", cap: "havin fun anywhere with you", img: "url('img/11.png')" },
     { title: "movie night", cap: "oare aici ne-am uitat la Hayden?", img: "url('img/12.png')" },
-    { title: "shared stories", cap: "replace this with a real memory", img: "url('img/13.png')" },
-    { title: "new adventures", cap: "add your own description here", img: "url('img/14.png')" },
-    { title: "simple joys", cap: "temporary caption", img: "url('img/15.png')" },
-    { title: "winter morning", cap: "replace this with a real memory", img: "url('img/16.png')" },
-    { title: "summer breeze", cap: "add your own description here", img: "url('img/17.png')" },
-    { title: "autumn leaves", cap: "temporary caption", img: "url('img/18.png')" },
-    { title: "spring flowers", cap: "replace this with a real memory", img: "url('img/19.png')" },
-    { title: "sunset views", cap: "add your own description here", img: "url('img/20.png')" },
-    { title: "midnight snacks", cap: "temporary caption", img: "url('img/21.png')" },
-    { title: "road trip", cap: "replace this with a real memory", img: "url('img/22.png')" },
-    { title: "cozy corner", cap: "add your own description here", img: "url('img/23.png')" },
-    { title: "favorite song", cap: "temporary caption", img: "url('img/24.png')" },
-    { title: "lasting memories", cap: "replace this with a real memory", img: "url('img/25.png')" }
+    { title: "pe banca", cap: "mereu se gaseste o banca la nevoie", img: "url('img/13.png')" },
+    { title: "train rides", cap: "trec asa rapid impreuna", img: "url('img/14.png')" },
+    { title: "selfie time", cap: "selfie-urile se fac idiferent de moment", img: "url('img/15.png')" },
+    { title: "selfie time part 2", cap: "am zis, indiferent de moment :))", img: "url('img/16.png')" },
+    { title: "my little star", cap: "coolest thing we ever did", img: "url('img/17.png')" },
+    { title: "2026", cap: "i couldn't ask for a better person by my side", img: "url('img/18.png')" },
+    { title: "frigut", cap: "this was such a pretty day", img: "url('img/19.png')" },
+    { title: "happy kiddos", cap: "nu poti zice ca nu ne distram impreuna, uite dovada", img: "url('img/20.png')" },
+    { title: "smily kiddos", cap: "asta asa sa nu aud ca am pus doar poze urate", img: "url('img/21.png')" },
+    { title: "conectare cu natura", cap: "you are the funniest guide ngl", img: "url('img/22.png')" },
+    { title: "6ft under", cap: "ne-am albit de la sarea aia, da macar ne-am curatat plamanii", img: "url('img/23.png')" },
+    { title: "turisti", cap: "ne relaxam aici", img: "url('img/24.png')" },
+    { title: ".", cap: "from day one and until the end of time", img: "url('img/25.png')" }
 ];
 
 const cookies = [
