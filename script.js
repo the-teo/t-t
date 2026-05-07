@@ -213,7 +213,7 @@ const stats = [
 ];
 
 // 2. STATE
-const APP_PASSWORD = "love";
+const APP_PASSWORD = "lara";
 let cookieCount = 0;
 let currentQ = 0;
 let quizScore = 0;
