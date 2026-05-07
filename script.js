@@ -348,6 +348,7 @@ function showResults() {
     document.getElementById('score-display').textContent = `${quizScore} / ${quizQuestions.length}`;
     let msg = "";
     if (quizScore === quizQuestions.length) msg = "you remember everything... suspicious";
+    else if(quizScore >= 8) msg = "good job, love"
     else if (quizScore >= 3) msg = "decent memory";
     else msg = "vibes only survival mode";
     document.getElementById('score-msg').textContent = msg;
