@@ -11,7 +11,20 @@
 </head>
 <body>
 
-    <div id="app">
+    <!-- 0. PASSWORD GATE -->
+    <div id="password-gate" class="gate-overlay">
+        <div class="gate-content">
+            <p class="subtitle pink">private access</p>
+            <h2 class="brand-mark-large">t&t</h2>
+            <div class="gate-input-wrapper">
+                <input type="password" id="gate-password" placeholder="enter password..." autofocus>
+                <button class="btn-primary" onclick="checkGate()">enter</button>
+            </div>
+            <p id="gate-error" class="error-text"></p>
+        </div>
+    </div>
+
+    <div id="app" class="app-hidden">
         <!-- PERSISTENT COUNTER -->
         <div id="friendship-counter" class="system-counter mono" title="time since May 10, 2023">
             0 days
@@ -42,7 +55,8 @@
                         <!-- JS generated items -->
                     </ul>
                     <div id="track-preview" class="track-preview">
-                        <div id="track-img" class="preview-img"></div>
+                        <img id="track-img" class="preview-img" src="" alt="memory preview">
+                        <h3 id="track-title" class="preview-title pink"></h3>
                         <p id="track-cap" class="preview-caption">Select a memory to play.</p>
                     </div>
                 </div>

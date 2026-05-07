@@ -4,10 +4,31 @@
 
 // 1. DATA
 const tracks = [
-    { title: "01. The Beginning", cap: "Where a simple hello changed everything.", img: "linear-gradient(45deg, #1e293b, #334155)" },
-    { title: "02. Late Night Chaos", cap: "Talking until the sun came up for no reason.", img: "linear-gradient(45deg, #334155, #475569)" },
-    { title: "03. The Inside Joke", cap: "Nobody else gets it, and that's the point.", img: "linear-gradient(45deg, #475569, #1e293b)" },
-    { title: "04. Growing Pains", cap: "Navigating life side by side.", img: "linear-gradient(45deg, #1e293b, #475569)" }
+    { title: "first pic ever", cap: "this is when it all started (officially)", img: "url('img/1.png')" },
+    { title: "late night pics", cap: "cabana lui Gemene :))", img: "url('img/2.png')" },
+    { title: "random haging out", cap: "", img: "url('img/3.png')" },
+    { title: "prima betie together", cap: "don't remember much tbh", img: "url('img/4.png')" },
+    { title: "small moments", cap: "you were always an angel love <3", img: "url('img/5.png')" },
+    { title: "poze check", cap: "(am vrut eu sa il decupez)", img: "url('img/6.png')" },
+    { title: "alte poze check", cap: "clasa a 12-a was a battle, glad I had you tho", img: "url('img/7.png')" },
+    { title: "my pretty girl", cap: "this is here just so you remember how adorable you are", img: "url('img/8.png')" },
+    { title: "matchy earrings", cap: "still love you for this gift, you the best", img: "url('img/9.png')" },
+    { title: "late night talks", cap: "(nu-mi amintesc ce faceam)", img: "url('img/10.png')" },
+    { title: "la aer", cap: "havin fun anywhere with you", img: "url('img/11.png')" },
+    { title: "movie night", cap: "oare aici ne-am uitat la Hayden?", img: "url('img/12.png')" },
+    { title: "shared stories", cap: "replace this with a real memory", img: "url('img/13.png')" },
+    { title: "new adventures", cap: "add your own description here", img: "url('img/14.png')" },
+    { title: "simple joys", cap: "temporary caption", img: "url('img/15.png')" },
+    { title: "winter morning", cap: "replace this with a real memory", img: "url('img/16.png')" },
+    { title: "summer breeze", cap: "add your own description here", img: "url('img/17.png')" },
+    { title: "autumn leaves", cap: "temporary caption", img: "url('img/18.png')" },
+    { title: "spring flowers", cap: "replace this with a real memory", img: "url('img/19.png')" },
+    { title: "sunset views", cap: "add your own description here", img: "url('img/20.png')" },
+    { title: "midnight snacks", cap: "temporary caption", img: "url('img/21.png')" },
+    { title: "road trip", cap: "replace this with a real memory", img: "url('img/22.png')" },
+    { title: "cozy corner", cap: "add your own description here", img: "url('img/23.png')" },
+    { title: "favorite song", cap: "temporary caption", img: "url('img/24.png')" },
+    { title: "lasting memories", cap: "replace this with a real memory", img: "url('img/25.png')" }
 ];
 
 const cookies = [
@@ -136,7 +157,7 @@ const cookies = [
 const quizQuestions = [
     {
       q: "Where did this whole thing actually start?",
-      options: ["Math class", "Playin solitaire", "Online", "We don’t even know anymore"],
+      options: ["Math class", "Playing solitaire", "Online", "We don’t even know anymore"],
       correct: 1
     },
     {
@@ -203,13 +224,42 @@ const stats = [
 ];
 
 // 2. STATE
+const APP_PASSWORD = "love";
 let cookieCount = 0;
 let currentQ = 0;
 let quizScore = 0;
 let brandClicks = 0;
 let clickTimer;
 
-// 3. NAVIGATION
+// 3. GATE LOGIC
+function checkGate() {
+    const input = document.getElementById('gate-password');
+    const error = document.getElementById('gate-error');
+    const gate = document.getElementById('password-gate');
+    const app = document.getElementById('app');
+
+    if (input.value.toLowerCase() === APP_PASSWORD) {
+        gate.style.opacity = '0';
+        gate.style.visibility = 'hidden';
+        app.classList.remove('app-hidden');
+        app.style.opacity = '1';
+        setTimeout(() => gate.remove(), 800);
+    } else {
+        error.textContent = "wrong password, try again :)";
+        input.value = "";
+        input.focus();
+    }
+}
+
+// Allow Enter key
+document.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const gate = document.getElementById('password-gate');
+        if (gate) checkGate();
+    }
+});
+
+// 4. NAVIGATION
 function navigateTo(id) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
@@ -236,8 +286,29 @@ function initHub() {
 }
 
 function updatePreview(i) {
-    document.getElementById('track-img').style.background = tracks[i].img;
-    document.getElementById('track-cap').textContent = tracks[i].cap;
+    const imgEl = document.getElementById('track-img');
+    const titleEl = document.getElementById('track-title');
+    const capEl = document.getElementById('track-cap');
+    
+    // Extract path from url('path/to/img')
+    const imgUrl = tracks[i].img.replace(/url\(['"]?|['"]?\)/g, "");
+    
+    // Simple fade transition
+    imgEl.style.opacity = '0';
+    
+    setTimeout(() => {
+        imgEl.src = imgUrl;
+        imgEl.style.display = 'block';
+        titleEl.textContent = tracks[i].title;
+        capEl.textContent = tracks[i].cap;
+        imgEl.style.opacity = '1';
+        
+        // Ensure the active item is in view (for mobile scrollable list)
+        const activeItem = document.querySelector('.track-item.active');
+        if (activeItem) {
+            activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+    }, 200);
 }
 
 // 5. QUIZ LOGIC
