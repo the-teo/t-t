@@ -156,13 +156,13 @@ const quizQuestions = [
     },
     {
       q: "What are we actually doing when we say 'let’s relax'?",
-      options: ["Studying", "Reading", "Taking a walk", "Cooking"],
-      correct: 1
+      options: ["Reading", "Studying", "Taking a walk", "Cooking"],
+      correct: 0
     },
     {
       q: "What’s one thing we somehow keep alive no matter what?",
-      options: ["Our sleep schedule", "TikTok streak", "Motivation", "Sanity"],
-      correct: 1
+      options: ["Our sleep schedule", "Motivation","TikTok streak", "Sanity"],
+      correct: 2
     },
     {
       q: "What’s our default activity together?",
@@ -176,8 +176,8 @@ const quizQuestions = [
     },
     {
       q: "What kind of people are we, realistically?",
-      options: ["Gym people", "Party people", "Bookworms", "Early sleepers"],
-      correct: 2
+      options: ["Gym people", "Bookworms", "Party people", "Early sleepers"],
+      correct: 1
     },
     {
       q: "How does 'watching a movie' usually go?",
@@ -191,8 +191,8 @@ const quizQuestions = [
     },
     {
         q: "Where are the best concerts held?",
-        options: ["The kitchen", "In the car", "In the bedroom"],
-        correct: 1 
+        options: ["In the car", "The kitchen", "In the bedroom"],
+        correct: 0
     },
     {
         q: "Do you love Teo?",
